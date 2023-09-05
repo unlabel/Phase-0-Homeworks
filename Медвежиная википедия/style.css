@@ -3,7 +3,6 @@ aside {
   height: 200vh;
   padding: 10px;
   font-size: large;
-  background-color: #f0f0f0;
 }
 
 main {
@@ -21,18 +20,44 @@ main {
 h1,
 h2,
 h3 {
-  margin: 0;
+  margin: 10px;
 }
 
 .header {
-  background-color: violet;
   padding: 20px;
   text-align: center;
 }
 
 .logo {
-  width: 60%;
-  height: 75%;
+  width: 30%;
+  height: 45%;
+  float: left;
+  justify-self: center;
+  overflow: hidden;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+  border: 10px solid white;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+
+  animation: ava-animate 15s infinite alternate;
+}
+
+@keyframes ava-animate {
+  0% {
+    border-radius: 49% 51% 52% 48% / 50% 49% 51% 50%;
+  }
+
+  40% {
+    border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%;
+  }
+
+  60% {
+    border-radius: 49% 51% 52% 48% / 50% 49% 51% 50%;
+  }
+
+  100% {
+    border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%;
+  }
 }
 
 .title {
