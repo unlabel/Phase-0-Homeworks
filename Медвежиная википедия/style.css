@@ -1,0 +1,63 @@
+aside {
+  width: 200px;
+  height: 100vh;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.left-column {
+  float: left;
+}
+
+.right-column {
+  float: right;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.header {
+  background-color: violet;
+  padding: 20px;
+  text-align: left;
+}
+
+.logo {
+  width: 60%;
+  height: 75%;
+}
+
+.title {
+  font-size: 34px;
+  margin-top: 10px;
+}
+
+.hero_link {
+  margin-right: 10px;
+  color: black;
+}
+
+.hero_link:hover {
+  color: rgb(27, 112, 183);
+}
+
+.hero_links {
+  display: flex;
+  font-size: 32px;
+  color: black;
+  justify-content: flex-end;
+}
+
+.hero_subtitle {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+footer {
+  position: fixed;
+  right: 230px;
+  bottom: 20px;
+}
