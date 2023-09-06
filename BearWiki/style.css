@@ -11,12 +11,16 @@ h1 {
     font-size: 48px;
 }
 
+h2,
+h3 {
+  margin: 10px;
+}
+
 aside {
     width: 350px;
-    height: 80vh;
+    height: 130vh;
     padding: 10px;
     font-size: large;
-    display: flex;
 }
 
 .left-column {
@@ -30,9 +34,50 @@ aside {
 main {
     height: 80vh;
     padding: 10px;
-    display: flex;
+    /* display: flex; Текст будет расположен столбиком*/
+}
+
+p {
+    margin: 0;
+    text-indent: 3ch;
 }
 
 footer {
-    height: 150px;  
+    height: auto;
+}
+
+.hero_link {
+    margin-right: 10px;
+    color: black;
+}
+
+.hero_link:hover {
+    color: rgb(27, 112, 183);
+}
+
+.hero_links {
+    display: flex;
+    font-size: 32px;
+    color: black;
+}
+
+.hero_subtitle {
+    font-size: 32px;
+    font-weight: 50;
+}
+
+.youtube-video-link {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 56.25%; /* Расчетное соотношение сторон для видео 16:9 */
+  width: 100%;
+  height: 0;
+}
+
+.youtube-video-link iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
