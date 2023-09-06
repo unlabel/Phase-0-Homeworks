@@ -1,0 +1,29 @@
+header {
+    height: 250px;
+}
+
+aside {
+    width: 350px;
+    height: 80vh;
+    padding: 10px;
+    font-size: large;
+    display: flex;
+}
+
+.left-column {
+    float: left;
+}
+
+.right-column {
+    float: right;
+}
+
+main {
+    height: 80vh;
+    padding: 10px;
+    display: flex;
+}
+
+footer {
+    height: 150px;  
+}
