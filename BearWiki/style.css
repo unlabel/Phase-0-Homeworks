@@ -11,14 +11,20 @@ h1 {
     font-size: 48px;
 }
 
-h2,
 h3 {
-  margin: 10px;
+    position: absolute; /* абсолютное позиционирование элемента. */
+    top: 10%; left: 20%; /* перемещает элемент в центр родительского контейнера по вертикали(50%) и горизонтали. */
+    transform: translate(-50%, -50%); /* выравнивание элемента по центру относительно его собственных размеров. */
+    color: black;
+}
+body {
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 aside {
     width: 350px;
-    height: 130vh;
+    height: 155vh;
     padding: 10px;
     font-size: large;
 }
@@ -44,11 +50,12 @@ p {
 
 footer {
     height: auto;
+    position: relative; 
 }
 
 .hero_link {
-    margin-right: 10px;
-    color: black;
+    margin: 10px;
+    color: whitesmoke;
 }
 
 .hero_link:hover {
@@ -58,12 +65,15 @@ footer {
 .hero_links {
     display: flex;
     font-size: 32px;
-    color: black;
+    position: absolute; /* абсолютное позиционирование элемента. */
+    top: 60%; left: 4%; /* перемещает элемент в центр родительского контейнера по вертикали(50%) и горизонтали. */
+    transform: translate(-50%, -50%); /* выравнивание элемента по центру относительно его собственных размеров. */
 }
 
 .hero_subtitle {
-    font-size: 32px;
-    font-weight: 50;
+    font-size: 38px;
+    font-weight: bolder;
+    color: whitesmoke;
 }
 
 .youtube-video-link {
