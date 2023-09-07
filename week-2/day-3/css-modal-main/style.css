@@ -5,7 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 400px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* вывод по середине */
     font-size: 26px;
 }
 
@@ -14,4 +16,19 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+button[name$="1"] {
+    background-color: rgb(35, 171, 35);
+    color: white;
+}
+
+button[name$="2"] {
+    background-color: rgb(155, 173, 222);
+    color: white;
+}
+
+button[name$="3"] {
+    background-color: rgb(235, 177, 70);
+    color: black;
 }
