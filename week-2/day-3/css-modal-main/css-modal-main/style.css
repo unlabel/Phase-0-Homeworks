@@ -1,0 +1,17 @@
+.main {
+    border: 4px solid black;
+    height: 200px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+    font-size: 26px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
