@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стилизация вложенных объектов</title>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="check1" />
+        <label for="check1">Флажок 1</label>
+        <input type="checkbox" checked id="check2" />
+        <label for="check2">Флажок 2</label>
+        <input type="text" id="input-text" />
+        <h3 class="header">Заголовок:</h3>
+        <ul class="list">
+          <li class="list-item" id="item-1">Элемент 1</li>
+          <li class="list-item" id="item-2">Элемент 2</li>
+          <li class="list-item" id="item-3" data-action="delete">Элемент 3</li>
+          <li class="list-item" id="item-4" data-action="edit do-not-delete">
+            Элемент 4
+          </li>
+          <li class="list-item" id="item-5" data-action="edit delete">
+            Элемент 5
+          </li>
+          <li><a href="#">...</a></li>
+        </ul>
+        <a href="http://site.com/file.zip">Ссылка на ZIP</a>
+        <a href="http://site.com/file.pdf">Ссылка на PDF</a>
+      </div>
+</body>
+</html>
