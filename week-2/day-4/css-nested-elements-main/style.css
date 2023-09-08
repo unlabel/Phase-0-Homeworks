@@ -7,4 +7,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    font-size: 36px;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+    color: blue; /* Позволяет выбрать элемент, который идет сразу же после указанного элемента. */
+}
+
+.list-item {
+  color: green;
+}
+
+a[href$=".zip"] {  /* селектор [attribute$=»value»] */
+  color: orange; /* ищет не по началу строки, а по концу. */ 
+}
+
+.list-item[data-action~="delete"] {
+  color: red;
+}
+
+.list-item:nth-child(odd) {
+  padding-left: 20px;
+}
+
+.list {
+  border: 1px dotted yellow;
+}
+
+a[href^="http"] {
+  margin-left: 20px;
+}
+
+/* h3.header + ul.list ~ a {
+    margin-left: 20px;
+} подсмотрел, но не понимаю*/
