@@ -1,0 +1,59 @@
+header {
+    border: solid 1px gray;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    padding-bottom: 30px;
+}
+
+nav {
+    border: solid 1px orange;
+    display: flex;
+    float: left;
+    width: 25%;
+    height: 100vh;
+}
+
+main {
+    border: solid 1px lavender;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 50%;
+    height: 100vh;
+}
+
+aside {
+    border: solid 1px purple;
+    display: flex;
+    flex-direction: column;
+    width: 24.68%;
+    height: 100vh;
+}
+
+footer {
+    border: solid 1px green;
+    height: 50px;
+}
+
+p {
+    text-indent: 25px;
+    padding-left: 10px;
+}
+
+p::first-letter {
+    color: red;
+    font-size: 36px;
+}
+
+nav > ul:hover {
+    color: yellow;
+}
+
+li:hover {
+    color: brown;
+}
+
+a:hover {
+    color: red;
+}
