@@ -8,6 +8,8 @@ body {
   background-color: #141414;
 }
 
+/* Блок относящийся к header */
+
 header {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -72,14 +74,17 @@ nav a:hover::after {
   border-bottom: solid #ffbc5b;
 }
 
+/* Верхний блок карточек */
+
 h2 {
+  display: inline-block;
   padding-top: 40px;
   margin-bottom: 20px;
   margin-left: 100px;
   color: #ffbc5b;
 }
 
-h2:hover {
+h2:hover, .next:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: blue;
@@ -144,9 +149,9 @@ h2:hover {
 }
 
 .cards p:hover,
-main a:hover {
+section a:hover {
   text-decoration: underline 2px;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
   text-decoration-color: #ffbc5b;
 }
 
@@ -174,6 +179,8 @@ main a:hover {
   color: #000;
 }
 
+/* Нижний блок карточек */
+
 .bottom-card {
   position: relative;
   width: 322px;
@@ -187,6 +194,12 @@ main a:hover {
 }
 
 span h2 {
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 20px;
+}
+
+a.next {
+  margin-left: 10px;
+  color: #ffbc5b;
+  text-decoration: none;
 }
