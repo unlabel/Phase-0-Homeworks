@@ -76,6 +76,7 @@ a:hover::after {
 
 h2 {
   padding-top: 40px;
+  margin-bottom: 20px;
   margin-left: 100px;
   color: #ffbc5b;
 }
@@ -94,7 +95,6 @@ h2:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   list-style-type: none;
-  background-color: #ffbc5b;
 }
 
 .card {
@@ -153,3 +153,20 @@ h2:hover {
     font-family: IBM Plex Mono;
     color: #000;
   }
+
+.bottom-card {
+  position: relative;
+  width: 322px;
+  height: 475px;
+}
+
+.bottom-card img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+}
+
+span h2 {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
