@@ -3,27 +3,50 @@
     padding: 0;
 }
 
+section {
+    text-align: center;
+}
+
 h2 {
     font-size: 48px;
 }
 
 .text {
-    border: solid 4px grey;
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     color: lavender;
 }
 
 .text2 {
-    border: solid 4px tomato;
     font-family: 'Lato', sans-serif;
     font-size: 30px;
     color: cornflowerblue;
+    background-color: #f1f1f1;
 }
 
 .text3 {
-    border: solid 4px khaki;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 24px;
     color: chocolate;
+}
+
+/* .text3 img {
+    border-radius: 3%;
+} */
+
+.img {
+    background-image: url("./groot.jpg");
+    background-position: 90%;
+    background-repeat: no-repeat;
+    width: 1500px;
+    height: 500px;
+}
+
+a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+a:hover {
+    color:blueviolet
 }
