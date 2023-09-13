@@ -13,13 +13,21 @@
 .item1 {
     background-image: url("./patterns/pattern-1.svg");
     flex: 0 0 calc(100% / 3);
+    position: relative;
 }
 
 .item1::after {  
-  content: '';  
-  width: 100px;  
-  height: 50px;  
-  background-color: red;  
+  content: '';
+  display: block;
+  margin: 100px 30px;
+  width: 30vw;  
+  height: 50vh;
+  border-radius: 3%;  
+  background-image: url("./img/Avatar.jpg");
+  position: absolute;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
 } 
 
 .item2 {
@@ -27,7 +35,48 @@
     flex: 0 0 calc(100% / 3); 
 }
 
+.item2::after {  
+  content: '';
+  display: block;
+  margin: 50px 30px;
+  width: 30vw;  
+  height: 60vh;
+  border-radius: 3%;  
+  background-image: url("./img/Oppenheimer.jpg");
+  position: absolute;
+  transform: rotate(90deg);
+  background-size: cover;
+} 
+
 .item3 {
     background-image: url("./patterns/pattern-3.svg");
     flex: 0 0 calc(100% / 3); 
+}
+
+.item3::after {  
+  content: '';
+  display: block;
+  margin: 50px 30px;
+  width: 30vw;  
+  height: 80vh;
+  border-radius: 3%; 
+  /* background-color: blue;  */
+  background: url("./img/Spider.webp") center / cover no-repeat;
+  /* url("./img/blackspider.jpg") right / contain no-repeat; */
+  position: absolute;
+}
+
+p {
+    font-size: 48px;
+    display: inline-block;
+    margin-left: 175px;
+    color: brown;
+    border: solid 3px black;
+}
+
+p:hover {
+    text-decoration: underline;
+    text-decoration-color: green;
+    color: slateblue;
+    border-color: white;
 }
