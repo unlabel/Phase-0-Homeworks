@@ -1,0 +1,53 @@
+body {
+    max-width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    margin: 0 auto;
+    background-color: lavender;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+}
+
+/* .firstletter .item__circle {
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    transition-duration: 3s;
+}
+
+.firstletter .item__rectangle {
+    -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    width: 150px;
+    height: 200px;
+    background-color: brown;
+}
+
+.secondletter .item__rectangle {
+    -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    width: 150px;
+    height: 200px;
+    background-color: brown;
+}
+
+.trirdletter .item__custom {
+    -webkit-clip-path: polygon(57% 0, 83% 49%, 57% 100%, 0% 100%, 55% 49%, 0% 0%);
+    clip-path: polygon(57% 0, 83% 49%, 57% 100%, 0% 100%, 55% 49%, 0% 0%);
+    background-color: black;
+    width: 150px;
+    height: 200px;
+} */
