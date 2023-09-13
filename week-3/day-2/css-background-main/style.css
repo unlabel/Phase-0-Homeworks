@@ -1,11 +1,33 @@
-.item1 {
-    background-color: lavender;
+* {
+    margin: 0;
+    padding: 0;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+.item1 {
+    background-image: url("./patterns/pattern-1.svg");
+    flex: 0 0 calc(100% / 3);
+}
+
+.item1::after {  
+  content: '';  
+  width: 100px;  
+  height: 50px;  
+  background-color: red;  
+} 
+
 .item2 {
-    background-color:cornflowerblue
+    background-image: url("./patterns/pattern-2.svg");
+    flex: 0 0 calc(100% / 3); 
 }
 
 .item3 {
-    background-color: darkmagenta
+    background-image: url("./patterns/pattern-3.svg");
+    flex: 0 0 calc(100% / 3); 
 }
