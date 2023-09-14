@@ -63,6 +63,34 @@ main {
     height: 60vw;
 }
 
+.attach-left-side {
+    display: flex;
+    margin: 2.1vw;
+    border: solid 2px hotpink;
+    width: 35vw;
+    height: 55vw;
+}
+
+.attach-right-side .figure1 {
+    display: flex;
+    border: solid 2px darkgreen;
+    width: 10vw;
+    height: 27.25vw;
+}
+
+.attach-right-side .figure2 {
+    display: flex;
+    border: solid 2px darkgreen;
+    width: 10vw;
+    height: 27.25vw;
+    margin-top: 27.75vw;
+}
+
+.attach-right-side {
+    display: flex;
+    margin: 2vw;
+}
+
 aside {
     display: flex;
     flex-direction: column;
@@ -92,6 +120,7 @@ footer {
 }
 
 .footer-left-side {
+    margin-right: 6vw;
     width: 60%;
     display: flex;
 }
@@ -110,7 +139,8 @@ footer {
 
 .footer-right-side {
     margin-top: 24vw;
+    margin-right: 0.5vw;
     border: solid 2px green;
-    width: 30vw;
+    width: 32vw;
     height: 3vw;
 }
