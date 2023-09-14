@@ -36,9 +36,8 @@ h2 {
 
 .img {
     background-image: url("./groot.jpg");
-    background-position: 90%;
+    background-position: 50%;
     background-repeat: no-repeat;
-    width: 1500px;
     height: 500px;
 }
 

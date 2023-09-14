@@ -103,6 +103,7 @@ h2:hover, .next:hover {
 }
 
 .card {
+  display: inline;
   position: relative;
   width: 322px;
   height: 182px;
@@ -184,7 +185,7 @@ section a:hover {
 .bottom-card {
   position: relative;
   width: 322px;
-  height: 475px;
+  /* height: 475px; */
 }
 
 .bottom-card img {
