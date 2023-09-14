@@ -92,10 +92,25 @@ footer {
 }
 
 .footer-left-side {
+    width: 60%;
     display: flex;
 }
 
-.footer-right-side {
+.footer-menu {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-menu > div {
+    width: 15vw;
+    height: 3vw;
+    border: 2px solid red;
+}
+
+.footer-right-side {
+    margin-top: 24vw;
+    border: solid 2px green;
+    width: 30vw;
+    height: 3vw;
 }
