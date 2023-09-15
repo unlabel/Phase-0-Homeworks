@@ -83,7 +83,7 @@ main {
     border: solid 2px darkgreen;
     width: 10vw;
     height: 27.25vw;
-    margin-top: 27.75vw;
+    align-self: flex-end;
 }
 
 .attach-right-side {
