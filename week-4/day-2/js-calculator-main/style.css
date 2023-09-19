@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inputField {
+    border: 3px solid red;
+    height: 75px;
+    width: 600px;
+}
+
+.inputField[type = "firstNumber"] {
+    margin-bottom: 25px;
+}
+
+.inputField[type = "secondNumber"] {
+    margin-top: 25px;
+}
+
+
+.operators {
+    display: flex;
+    justify-content: space-between;
+}
+
+.operators button {
+    height: 50px;
+    width: 100px;
+}
+
+.result {
+    display: block;
+    margin: 25px auto;
+    width: 125px;
+    height: 50px;
+}
