@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор</title>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <input class="inputField" type="firstNumber">
+        <input class="inputField" type="firstNumber" id="num1">
         <div class="operators">
-            <button>+</button>
-            <button>-</button>
-            <button>X</button>
-            <button>/</button>
+            <button id="plus" onclick="operator='+'">+</button>
+            <button id="minus" onclick="operator='-'">-</button>
+            <button id="multiply" onclick="operator='*'">X</button>
+            <button id="division" onclick="operator='/'">/</button>
         </div>
-        <input class="inputField" type="secondNumber">
-        <div><button class="result">Посчитать</button></div>
+        <input class="inputField" type="secondNumber" id="num2">
+        <div><button onclick="func()" class="result">Посчитать</button></div>
         <div>
-            <input class="inputField" type="Answer">
+            <p id="result"></p>
         </div>
     </div>
 </body>
