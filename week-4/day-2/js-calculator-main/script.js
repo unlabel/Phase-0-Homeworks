@@ -19,3 +19,14 @@ function func() {
     }
     document.getElementById("result").innerHTML = result;
 }
+
+let buttons = document.querySelectorAll('.operators button');
+
+buttons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    buttons.forEach(function(btn) {
+      btn.classList.remove('button-clicked');
+    });
+    this.classList.add('button-clicked');
+  });
+});

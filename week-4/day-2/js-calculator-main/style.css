@@ -50,3 +50,7 @@
 p {
     text-align: center;
 }
+
+.button-clicked {
+  background-color: red;
+}
