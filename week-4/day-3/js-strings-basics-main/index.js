@@ -25,3 +25,27 @@
 //     return result;
 // }
 // console.log('JS is so coooool!'.myCamelCase()); //jsIsSoCoooool!
+
+
+// function myRandomText(number) {
+//   let randomWords = ["lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipisicing", "elit", "harum"];
+  
+//   if (number > randomWords.length) {
+//     return 'Недостаточно слов';
+//   }
+  
+//   let shuffledWords = randomWords.slice().sort(() => Math.random() - 0.5);
+//   let selectedWords = shuffledWords.slice(0, number);
+//   let capitalizedWords = selectedWords.map((word, index) => {
+//     if (index === 0) {
+//       return word.charAt(0).toUpperCase() + word.slice(1);
+//     } else {
+//       return word;
+//     }
+//   });
+  
+//   let randomText = capitalizedWords.join(' ') + '.';
+//   return randomText;
+// }
+
+// console.log(myRandomText(9));
