@@ -49,3 +49,28 @@
 // }
 
 // console.log(myRandomText(9));
+
+function myRandomText(number) {
+  let words = ["lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipisicing", "elit", "harum"];
+  
+  const uniqueWords = new Set();
+  let result = "";
+
+  while (uniqueWords.size < number) {
+    const randomIndex = Math.floor(Math.random() * words.length);
+    uniqueWords.add(words[randomIndex]);
+  }
+
+  const uniqueWordsArr = Array.from(uniqueWords);
+  for (let i = 0; i < uniqueWordsArr.length; i++) {
+    const word = uniqueWordsArr[i];
+    if (i === 0) {
+      result += word.charAt(0).toUpperCase() + word.slice(1);
+    } else {
+      result += " " + word;
+    }
+  }
+
+  return result + ".";
+}
+console.log(myRandomText(9));
