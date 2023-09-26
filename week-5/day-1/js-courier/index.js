@@ -15,12 +15,13 @@ function add(location) {
     locations[postalCode] = [];
   }
 
-  locations[postalCode].push(location.slice(1)); // Добавляем вложенный массив без почтового индекса
+  locations[postalCode].push(location); // Добавляем вложенный массив без почтового индекса
 }
 
 add(home);
 add(work);
 add(gym);
 add(chill);
+add([1551, "Home", "Севастополь, ш. Рублевское, 1, 1"]);
 
 console.log(locations);
