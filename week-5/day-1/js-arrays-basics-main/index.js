@@ -73,23 +73,39 @@ const pendingTasks = [
 ];
 const completedTasks = [];
 
-function completeByIndex(index) {
+// function completeByIndex(index) {
+//   if (index >= 0 && index < pendingTasks.length) {
+//     const completedTask = pendingTasks.splice(index, 1);
+//     completedTasks.push(completedTask[0]);
+//     return completedTasks;
+//   }
+// }
+// completeByIndex(0);
+// completeByIndex(0);
+// completeByIndex(0);
+
+// function getStats() {
+//   return `Статистика по задачам:
+//   ☑︎ выполнено ${completedTasks.length} из ${
+//     pendingTasks.length + completedTasks.length
+//   }
+//   ☐ осталось сделать ${pendingTasks.length}`;
+// }
+// console.log(getStats());
+
+function deleteByIndex(index) {
+  if (index < 0 || !Number.isInteger(index)) {
+    throw new Error("Индекс должен быть целым и положительным числом");
+  }
+
   if (index >= 0 && index < pendingTasks.length) {
-    const completedTask = pendingTasks.splice(index, 1);
-    completedTasks.push(completedTask[0]);
-    return completedTasks;
+    const deletedTask = pendingTasks.splice(index, 1);
+    return deletedTask[0];
   }
 }
-completeByIndex(0);
-completeByIndex(0);
-completeByIndex(0);
-
-
-function getStats() {
-  return `Статистика по задачам: 
-  ☑︎ выполнено ${completedTasks.length} из ${
-    pendingTasks.length + completedTasks.length
-  }
-  ☐ осталось сделать ${pendingTasks.length}`;
+try {
+  console.log(deleteByIndex(5));
+  console.log(deleteByIndex(-1));
+} catch (error) {
+  console.error(error.message);
 }
-console.log(getStats());
