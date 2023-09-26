@@ -62,7 +62,7 @@
 // console.log(pendingTasks);
 // console.log(completedTasks);
 
-// Release 4
+// Release 4-6
 const pendingTasks = [
   "Зарядить телефон",
   "Изучить метод splice",
@@ -93,19 +93,28 @@ const completedTasks = [];
 // }
 // console.log(getStats());
 
-function deleteByIndex(index) {
-  if (index < 0 || !Number.isInteger(index)) {
-    throw new Error("Индекс должен быть целым и положительным числом");
-  }
+// function deleteByIndex(index) {
+//   if (index < 0 || !Number.isInteger(index)) {
+//     throw new Error("Индекс должен быть целым и положительным числом");
+//   }
 
+//   if (index >= 0 && index < pendingTasks.length) {
+//     const deletedTask = pendingTasks.splice(index, 1);
+//     return deletedTask[0];
+//   }
+// }
+// try {
+//   console.log(deleteByIndex(5));
+//   console.log(deleteByIndex(-1));
+// } catch (error) {
+//   console.error(error.message);
+// }
+
+function updateByIndex(index, editTask) {
   if (index >= 0 && index < pendingTasks.length) {
-    const deletedTask = pendingTasks.splice(index, 1);
-    return deletedTask[0];
+    const updateTask = pendingTasks.splice(index, 1);
+    return pendingTasks.splice(index, 0, editTask);
   }
 }
-try {
-  console.log(deleteByIndex(5));
-  console.log(deleteByIndex(-1));
-} catch (error) {
-  console.error(error.message);
-}
+console.log(updateByIndex(0, "Зарядить планшет"));
+console.log(pendingTasks);
