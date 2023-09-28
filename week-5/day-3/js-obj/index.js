@@ -15,4 +15,17 @@ function create(task) {
   return obj;
 }
 create("Купить хлеб");
-console.log(create("Выгулять пса"));
+create("Выгулять пса");
+
+function toggleById(allTasks, numIdentificator) {
+  for (let i = 0; i < allTasks.length; i++) {
+    if (numIdentificator === allTasks[i].id) {
+      allTasks[i].isDone = true;
+      return allTasks[i];
+    }
+  }
+  return "Задача с таким номером отсутствует";
+}
+toggleById(allTasks, 1);
+toggleById(allTasks, 2);
+console.log(allTasks);
