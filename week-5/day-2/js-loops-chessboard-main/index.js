@@ -34,4 +34,4 @@ function generateChessboard(size) {
   return board;
 }
 
-console.log(generateChessboard(4));
+console.log(generateChessboard(6));
