@@ -16,6 +16,7 @@ function create(task) {
 }
 create("Купить хлеб");
 create("Выгулять пса");
+create("Выбросить мусор");
 
 function toggleById(allTasks, numIdentificator) {
   for (let i = 0; i < allTasks.length; i++) {
@@ -29,3 +30,23 @@ function toggleById(allTasks, numIdentificator) {
 toggleById(allTasks, 1);
 toggleById(allTasks, 2);
 console.log(allTasks);
+
+function logTasks(allTasks) {
+  if (!Array.isArray(allTasks) || allTasks.length === 0) {
+    console.log("Пока задач нет. Запланируй что-нибудь!");
+    return;
+  }
+  let result = "";
+  for (let i = 0; i < allTasks.length; i++) {
+    if (allTasks[i].isDone === true) {
+      result += `☑ ${allTasks[i].text}`;
+    } else {
+      result += `☐ ${allTasks[i].text}`;
+    }
+    if (i < allTasks.length - 1) {
+      result += "\n";
+    }
+  }
+  return result;
+}
+console.log(logTasks());
