@@ -6,9 +6,13 @@ function generateId() {
 const allTasks = [];
 
 function create(task) {
-  const obj = {};
-  obj.id = generateId();
-  obj.text = task;
-  obj.isDone = false;
-  return allTasks.push(obj);
+  const obj = {
+    id: generateId(),
+    text: task,
+    isDone: false,
+  };
+  allTasks.push(obj);
+  return obj;
 }
+create("Купить хлеб");
+console.log(create("Выгулять пса"));
