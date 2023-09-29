@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Список дел</title>
+    <link
+      rel="preload"
+      href="fonts/Roboto/Roboto-Regular.ttf"
+      as="font"
+      type="font/ttf"
+    />
+    <link
+      rel="preload"
+      href="fonts/Roboto_Slab/RobotoSlab-Regular.ttf"
+      as="font"
+      type="font/ttf"
+    />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <script src="scripts/vendor/confetti.browser.min.js"></script>
+    <script src="scripts/index.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <h1>Список дел</h1>
+
+      <form action="#" name="create-task">
+        <input type="text" name="text" placeholder="Сделать что-то…" required />
+        <button type="submit" class="primary" title="Создать задачу">
+          <!-- Это HTML-сущность для стрелки вправо (right arrow) -->
+          &rarr;
+          <!-- Больше про HTML-сущности можно прочесть здесь: https://developer.mozilla.org/ru/docs/Glossary/Entity -->
+        </button>
+      </form>
+
+      <ul class="js-list">
+        <li data-id="0">
+          <input id="task-0" type="checkbox" class="toggle js-toggle" />
+          <label for="task-0">Запланировать день</label>
+        </li>
+        <li data-id="0a">
+          <input id="task-0a" type="checkbox" class="toggle js-toggle" />
+          <label for="task-0a">Поучаствовать в лекции</label>
+        </li>
+        <li data-id="0b">
+          <input id="task-0b" type="checkbox" class="toggle js-toggle" />
+          <label for="task-0b">Решить задачу</label>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

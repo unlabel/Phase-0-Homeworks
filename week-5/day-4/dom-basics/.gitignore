@@ -1,0 +1,5 @@
+# Зависимости
+node_modules
+
+# Разное
+.DS_Store
