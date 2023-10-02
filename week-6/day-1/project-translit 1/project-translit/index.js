@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       щ: "sch",
       ъ: "",
       ы: "y",
-      ь: "'",
+      ь: "",
       э: "e",
       ю: "yu",
       я: "ya",
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       Щ: "SCH",
       Ъ: "",
       Ы: "Y",
-      Ь: "'",
+      Ь: "",
       Э: "E",
       Ю: "YU",
       Я: "YA",
@@ -94,10 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const leftTableRow = leftTableBody.insertRow();
       const leftNumberCell = leftTableRow.insertCell(0);
       const leftTextCell = leftTableRow.insertCell(1);
-
-      // Обновляем currentNumber на основе количества строк в таблице
-      currentNumber = leftTableBody.rows.length;
-
       leftNumberCell.textContent = currentNumber;
       leftTextCell.textContent = text;
 
@@ -107,8 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const rightTranslationCell = rightTableRow.insertCell(0);
       const rightDeleteCell = rightTableRow.insertCell(1);
       rightTranslationCell.textContent = transliteratedText;
-      rightDeleteCell.innerHTML =
-        '<img src="./img/Delete.svg" class="deleteButton" alt="Delete">';
+            rightDeleteCell.innerHTML =
+              '<img src="./img/Delete.svg" class="deleteButton" alt="Delete">';
+
+
+      currentNumber++;
 
       textInput.value = "";
     }
@@ -126,13 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const rowToDelete = event.target.closest("tr");
       leftTableBody.deleteRow(rowToDelete.rowIndex - 1);
       rightTableBody.deleteRow(rowToDelete.rowIndex - 1);
-
-      // Обновляем номера в левой таблице
-      const leftTableRows = leftTableBody.querySelectorAll("tr");
-      leftTableRows.forEach((row, index) => {
-        const leftNumberCell = row.cells[0];
-        leftNumberCell.textContent = index + 1;
-      });
     }
   });
 });
