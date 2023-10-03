@@ -74,7 +74,7 @@ header {
 .table {
     display: flex;
     margin-top: 60px;
-    max-width: 500px;
+    width: 500px;
     flex-shrink: 0;
     background: #f0f0f0;
     border-radius: 8px;
@@ -100,15 +100,9 @@ header {
     border-radius: 0px 8px 8px 0px;
 }
 
-.mnogabukv {
-    max-width: 90px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
 .rightTable .deleteButton {
-    display: flex;
+    margin-top: 12px;
+    margin-left: 120px;
 }
 
 .footer-container {
