@@ -87,15 +87,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // Функция для применения стилей к элементам с текстом больше 7 символов
   function applyEllipsisToLongText() {
     const elementsToCheck = document.querySelectorAll(".mnogabukv");
+  const tooltip = document.querySelector(".tooltip");
 
     elementsToCheck.forEach((element) => {
       if (element.textContent.length > 7) {
         element.style.overflow = "hidden";
         element.style.whiteSpace = "nowrap";
         element.style.textOverflow = "ellipsis";
-      }
-    });
-  }
+
+      element.addEventListener("mouseenter", () => {
+        tooltip.textContent = element.textContent;
+        tooltip.style.left = element.getBoundingClientRect().left + "px";
+        tooltip.style.top = element.getBoundingClientRect().top - 30 + "px";
+        tooltip.style.display = "block";
+      });
+
+      element.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+      });
+    }
+  });
+}
+
+applyEllipsisToLongText();
 
   // Вызываем функцию для применения стилей при загрузке страницы
   applyEllipsisToLongText();
