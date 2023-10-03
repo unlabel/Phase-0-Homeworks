@@ -84,6 +84,29 @@ document.addEventListener("DOMContentLoaded", function () {
       .join("");
   }
 
+  // Добавьте слово "Привет" при загрузке страницы
+  const initialText = "Привет";
+  const transliteratedText = transliterate(initialText);
+
+  // Добавляем текст в левую таблицу
+  const leftTableRow = leftTableBody.insertRow();
+  const leftNumberCell = leftTableRow.insertCell(0);
+  const leftTextCell = leftTableRow.insertCell(1);
+
+  // Обновляем currentNumber на основе количества строк в таблице
+  currentNumber = leftTableBody.rows.length;
+
+  leftNumberCell.textContent = currentNumber;
+  leftTextCell.textContent = initialText;
+
+  // Транслитерируем текст и добавляем его в правую таблицу
+  const rightTableRow = rightTableBody.insertRow();
+  const rightTranslationCell = rightTableRow.insertCell(0);
+  const rightDeleteCell = rightTableRow.insertCell(1);
+  rightTranslationCell.textContent = transliteratedText;
+  rightDeleteCell.innerHTML =
+    '<img src="./img/Delete.svg" class="deleteButton" alt="Delete">';
+
   addButton.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -115,9 +138,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   clearButton.addEventListener("click", function () {
-    leftTableBody.innerHTML = "";
-    rightTableBody.innerHTML = "";
-    currentNumber = 1;
+    // Перезагружаем страницу при клике на кнопку "Очистить всё"
+    // location.reload();
+    while (leftTableBody.rows.length > 1) {
+      leftTableBody.deleteRow(1);
+      rightTableBody.deleteRow(1);
+    }
   });
 
   // Добавляем обработчик события на удаление
