@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Функция для применения стилей к элементам с текстом больше 7 символов
   function applyEllipsisToLongText() {
     const elementsToCheck = document.querySelectorAll(".mnogabukv");
-    const tooltip = document.querySelector(".tooltip");
+  const tooltip = document.querySelector(".tooltip");
 
     elementsToCheck.forEach((element) => {
       if (element.textContent.length > 7) {
@@ -95,20 +95,23 @@ document.addEventListener("DOMContentLoaded", function () {
         element.style.whiteSpace = "nowrap";
         element.style.textOverflow = "ellipsis";
 
-        element.addEventListener("mouseenter", () => {
-          tooltip.textContent = element.textContent;
-          tooltip.style.left = element.getBoundingClientRect().left + "px";
-          tooltip.style.top = element.getBoundingClientRect().top - 30 + "px";
-          tooltip.style.display = "block";
-        });
+      element.addEventListener("mouseenter", () => {
+        tooltip.textContent = element.textContent;
+        tooltip.style.left = element.getBoundingClientRect().left + "px";
+        tooltip.style.top = element.getBoundingClientRect().top - 30 + "px";
+        tooltip.style.display = "block";
+      });
 
-        element.addEventListener("mouseleave", () => {
-          tooltip.style.display = "none";
-        });
-      }
-    });
-  }
+      element.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+      });
+    }
+  });
+}
 
+applyEllipsisToLongText();
+
+  // Вызываем функцию для применения стилей при загрузке страницы
   applyEllipsisToLongText();
 
   // Добавьте слово "Привет" при загрузке страницы
@@ -131,22 +134,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const rightTranslationCell = rightTableRow.insertCell(0);
   const rightDeleteCell = rightTableRow.insertCell(1);
   rightTranslationCell.textContent = transliteratedText;
-
-  // Добавляем уникальный класс для подсказки в правую таблицу
-  rightTranslationCell.classList.add("transliteration-right");
-
   rightDeleteCell.innerHTML =
     '<img src="./img/Delete.svg" class="deleteButton" alt="Delete">';
-
-  if (currentNumber === 1) {
-    const deleteButton = rightDeleteCell.querySelector(".deleteButton");
-    deleteButton.disabled = true;
-  }
-
-  if (currentNumber === 1) {
-    const deleteButton = rightDeleteCell.querySelector(".deleteButton");
-    deleteButton.disabled = true;
-  }
 
   addButton.addEventListener("click", function (event) {
     event.preventDefault();
@@ -181,10 +170,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const rightTranslationCell = rightTableRow.insertCell(0);
       const rightDeleteCell = rightTableRow.insertCell(1);
       rightTranslationCell.textContent = transliteratedText;
-
-      // Добавляем уникальный класс для подсказки в правую таблицу
-      rightTranslationCell.classList.add("transliteration-right");
-
       rightDeleteCell.innerHTML =
         '<img src="./img/Delete.svg" class="deleteButton" alt="Delete">';
 
@@ -195,54 +180,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  textInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-
-      const text = textInput.value.trim();
-
-      if (text !== "") {
-        // Добавляем текст в левую таблицу
-        const leftTableRow = leftTableBody.insertRow();
-        const leftNumberCell = leftTableRow.insertCell(0);
-        const leftTextCell = leftTableRow.insertCell(1);
-
-        // Обновляем currentNumber на основе количества строк в таблице
-        currentNumber = leftTableBody.rows.length;
-
-        leftNumberCell.textContent = currentNumber;
-
-        // Создаем элемент с классом .mnogabukv и применяем стили
-        const textElement = document.createElement("div");
-        textElement.textContent = text;
-        textElement.className = "mnogabukv";
-
-        leftTextCell.appendChild(textElement);
-
-        // Транслитерируем текст
-        const transliteratedText =
-          text.length > 7
-            ? transliterate(text.substring(0, 7)) + "..."
-            : transliterate(text);
-        // Транслитерируем текст и добавляем его в правую таблицу
-        const rightTableRow = rightTableBody.insertRow();
-        const rightTranslationCell = rightTableRow.insertCell(0);
-        const rightDeleteCell = rightTableRow.insertCell(1);
-        rightTranslationCell.textContent = transliteratedText;
-
-        // Добавляем уникальный класс для подсказки в правую таблицу
-        rightTranslationCell.classList.add("transliteration-right");
-
-        rightDeleteCell.innerHTML =
-          '<img src="./img/Delete.svg" class="deleteButton" alt="Delete">';
-
-        textInput.value = "";
-        applyEllipsisToLongText();
-      }
-    }
-  });
-
   clearButton.addEventListener("click", function () {
+    // Перезагружаем страницу при клике на кнопку "Очистить всё"
+    // location.reload();
     while (leftTableBody.rows.length > 1) {
       leftTableBody.deleteRow(1);
       rightTableBody.deleteRow(1);
@@ -253,14 +193,6 @@ document.addEventListener("DOMContentLoaded", function () {
   rightTableBody.addEventListener("click", function (event) {
     if (event.target.classList.contains("deleteButton")) {
       const rowToDelete = event.target.closest("tr");
-
-      // Проверяем, является ли удаляемая строка первой
-      if (rowToDelete.rowIndex === 1) {
-        // Если это первая строка, просто завершаем обработку и не удаляем ее
-        return;
-      }
-
-      // Если это не первая строка, удаляем строку как обычно
       leftTableBody.deleteRow(rowToDelete.rowIndex - 1);
       rightTableBody.deleteRow(rowToDelete.rowIndex - 1);
 

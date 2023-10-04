@@ -74,20 +74,49 @@ header {
 .table {
     display: flex;
     margin-top: 60px;
-    width: 500px;
+    max-width: 500px;
     flex-shrink: 0;
+    background: #f0f0f0;
     border-radius: 8px;
     border: 0px solid var(--bg-purple, #4520ab);
+    font-family: IBM Plex Mono;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.54px;
 }
 
 #leftTable {
-    width: 250px;
-    background: #F0F0F0;
+    width: 50%;
+    padding-left: 15px;
+    border-right: 2px solid #111;
 }
 
 .rightTable {
-    width: 250px;
+    width: 50%;
     background: #adadad;
+    padding-left: 25px;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.mnogabukv {
+    max-width: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
+}
+
+.rightTable .deleteButton {
+    display: flex;
 }
 
 .footer-container {
