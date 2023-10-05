@@ -32,14 +32,14 @@ header {
     flex-shrink: 0;
     border-radius: 14px;
     border: 2px solid var(--bg-black, #111);
-    margin: 0 auto; /* Горизонтальное центрирование */
-    margin-top: 86px; /* Вертикальное выравнивание */
+    margin: 0 auto;
+    margin-top: 86px;
 }
 
 .input__text {
     border: none;
     margin-left: 21px;
-    margin-top: 12.5px;
+    margin-top: 13px;
     flex-shrink: 0;
     color: var(--bg-black, #111);
     font-family: "IBM Plex Mono", monospace;
@@ -79,7 +79,7 @@ header {
     background: #f0f0f0;
     border-radius: 8px;
     border: 0px solid var(--bg-purple, #4520ab);
-    font-family: IBM Plex Mono;
+    font-family: "IBM Plex Mono", monospace;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -107,16 +107,36 @@ header {
     text-overflow: ellipsis;
 }
 
+.transliteration-right {
+    max-width: 75px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .tooltip {
     display: none;
     position: absolute;
     border-radius: 10px;
     background: #fff;
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
+    width: 138px;
+    padding: 8px 16px 10px 16px;
+    align-items: flex-start;
+    gap: 10px;
+    word-wrap: break-all;
+    color: var(--bg-black, #111);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.48px;
 }
 
 .rightTable .deleteButton {
     display: flex;
+    padding-left: 50px;
 }
 
 .footer-container {
@@ -147,4 +167,51 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+@media screen and (max-width: 370px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        color: var(--main-purple, #4520ab);
+        text-align: center;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -2.52px;
+    }
+
+    .inputField {
+        display: flex;
+        width: 328px;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 14px;
+        border: 2px solid var(--bg-black, #111);
+        margin: 0 auto;
+        margin-top: 86px;
+    }
+
+    .input__text {
+        border: none;
+        margin-left: 21px;
+        margin-top: 12.5px;
+        width: 100px;
+        flex-shrink: 0;
+        color: var(--bg-black, #111);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.9px;
+        opacity: 0.4;
+    }
 }

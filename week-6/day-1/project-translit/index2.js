@@ -86,10 +86,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функция для применения стилей к элементам с текстом больше 7 символов
   function applyEllipsisToLongText() {
-    const elementsToCheck = document.querySelectorAll(".mnogabukv");
+    const leftElementsToCheck = document.querySelectorAll("#leftTable .mnogabukv");
+    const rightElementsToCheck = document.querySelectorAll(".rightTable .mnogabukv");
     const tooltip = document.querySelector(".tooltip");
 
-    elementsToCheck.forEach((element) => {
+    leftElementsToCheck.forEach((element) => {
+      if (element.textContent.length > 7) {
+        element.style.overflow = "hidden";
+        element.style.whiteSpace = "nowrap";
+        element.style.textOverflow = "ellipsis";
+
+        element.addEventListener("mouseenter", () => {
+          tooltip.textContent = element.textContent;
+          tooltip.style.left = element.getBoundingClientRect().left - 10 + "px";
+          tooltip.style.top = element.getBoundingClientRect().top - 40 + "px";
+          tooltip.style.display = "block";
+        });
+
+        element.addEventListener("mouseleave", () => {
+          tooltip.style.display = "none";
+        });
+      }
+    });
+
+    rightElementsToCheck.forEach((element) => {
       if (element.textContent.length > 7) {
         element.style.overflow = "hidden";
         element.style.whiteSpace = "nowrap";
@@ -112,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
   applyEllipsisToLongText();
 
   // Добавьте слово "Привет" при загрузке страницы
-  const initialText = "Привет";
+  const initialText = "Привет 👋";
   const transliteratedText = transliterate(initialText);
 
   // Добавляем текст в левую таблицу
@@ -174,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Транслитерируем текст
       const transliteratedText =
         text.length > 7
-          ? transliterate(text.substring(0, 7)) + "..."
+          ? transliterate(text.slice(0, 7)) + "..."
           : transliterate(text);
       // Транслитерируем текст и добавляем его в правую таблицу
       const rightTableRow = rightTableBody.insertRow();
@@ -222,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Транслитерируем текст
         const transliteratedText =
           text.length > 7
-            ? transliterate(text.substring(0, 7)) + "..."
+            ? transliterate(text.slice(0, 7)) + "..."
             : transliterate(text);
         // Транслитерируем текст и добавляем его в правую таблицу
         const rightTableRow = rightTableBody.insertRow();
