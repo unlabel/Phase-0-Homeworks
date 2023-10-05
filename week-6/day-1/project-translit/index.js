@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     return text.split("").map((char) => translitMap[char] || char).join("");
   }
-
   const initialText = "Привет 👋";
   const transliteratedText = transliterate(initialText);
 
