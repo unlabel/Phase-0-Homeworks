@@ -71,6 +71,11 @@ header {
     letter-spacing: -0.54px;
 }
 
+.input__button:active {
+    transform: scale(0.85);
+    transition: transform 0.2s;
+}
+
 .table {
     display: flex;
     margin-top: 60px;
@@ -86,6 +91,22 @@ header {
     line-height: 40px;
     letter-spacing: -0.54px;
 }
+
+/* .table td {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.table td::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    width: 185%;
+    height: 1px;
+    background-color: #111;
+} */
 
 #leftTable {
     width: 50%;
@@ -108,7 +129,7 @@ header {
 }
 
 .transliteration-right {
-    max-width: 75px;
+    max-width: 80px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -136,7 +157,7 @@ header {
 
 .rightTable .deleteButton {
     display: flex;
-    padding-left: 50px;
+    padding-left: 70px;
 }
 
 .footer-container {
@@ -159,7 +180,7 @@ header {
 }
 
 .clearButton:active {
-    transform: scale(0.75);
+    transform: scale(0.85);
     transition: transform 0.2s;
 }
 
@@ -169,28 +190,51 @@ header {
     gap: 12px;
 }
 
-@media screen and (max-width: 370px) {
-    .container {
+@media screen and (max-width: 519px) {
+
+    .inputField {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: 328px; /* Измените это значение на нужное */
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 14px;
+        border: 2px solid var(--bg-black, #111);
+        margin: 0 auto;
+        margin-top: 76px; /* Уберите лишние 10px отсюда */
     }
 
+    .input__text {
+        border: none;
+        margin-left: 21px;
+        margin-top: 12.5px;
+        width: 150px;
+        flex-shrink: 0;
+        color: var(--bg-black, #111);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.9px;
+        opacity: 0.4;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 720px) {
     header {
         color: var(--main-purple, #4520ab);
         text-align: center;
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 36px;
+        font-family: IBM Plex Mono;
+        font-size: 40px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        letter-spacing: -2.52px;
+        letter-spacing: -3.2px;
     }
 
     .inputField {
         display: flex;
-        width: 328px;
+        width: 500px;
         height: 56px;
         flex-shrink: 0;
         border-radius: 14px;
@@ -203,7 +247,7 @@ header {
         border: none;
         margin-left: 21px;
         margin-top: 12.5px;
-        width: 100px;
+        width: 209px;
         flex-shrink: 0;
         color: var(--bg-black, #111);
         font-family: "IBM Plex Mono", monospace;
