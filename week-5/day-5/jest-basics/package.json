@@ -1,0 +1,23 @@
+{
+  "name": "welcome-to-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elbrus-Bootcamp/welcome-to-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elbrus-Bootcamp/welcome-to-js/issues"
+  },
+  "homepage": "https://github.com/Elbrus-Bootcamp/welcome-to-js#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
